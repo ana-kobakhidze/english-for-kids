@@ -3,7 +3,18 @@
     --black: #010001;
     --purple: #854f94;
     --pink: #edc4d9;
-    --white: #FFFFFF
+    --white: #FFFFFF;
+    --cream: #F1E2EF;
+    --darkGreen: #1d4e00;
+    --actionsI: #6CA342;
+    --actionsII: #F58720;
+    --animalsI: #ED264E;
+    --animalsII: #F4A737;
+    --clothes: #78C486;
+    --emotions: #934D9D;
+    --fruits: #FF5671;
+    --vegetables: #7761D3;
+
 }
 
 * {
@@ -48,6 +59,7 @@ body{
     display: flex;
     row-gap: 10px;
     flex-direction: column;
+    z-index: 4;
 }
 .line{
     height: 12px;
@@ -79,11 +91,9 @@ body{
     padding-left: 81px;
     text-align: left;
     background-color: var(--purple);
-    z-index: -1;
+    z-index: 3;
     transform: translate(-150%);
     transition: transform 0.5s ease-in-out;
- 
-
   }
   .menu-items a{
     text-decoration: none;
@@ -92,7 +102,8 @@ body{
     letter-spacing: 0.3px;
   }
   .menu-items a:hover{
-    font-weight: bolder;
+    color: var(--cream);
+    cursor: pointer;
   }
  .menu-items li {
     list-style-type: none;
@@ -100,8 +111,26 @@ body{
     font-size: 1.8rem;
 
   }
+  #overlay{
+    opacity: 0;
+    position: unset;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.4);
+    cursor: pointer;
+  }
+
   #menu input[type="checkbox"]:checked ~ .menu-items {
     transform: translateX(0);
+  }
+  #menu input[type="checkbox"]:checked ~ #overlay {
+    opacity:1;
+    position:absolute;
   }
 #menu input[type="checkbox"]:checked ~ #menu-icon .line1 {
     background-color: var(--pink);
@@ -203,7 +232,7 @@ body{
   #switch input:checked~.labels::before {
     opacity: 1;
   }
-#section{
+#footer{
     flex-basis: 50%;
     display: flex;
     align-items: flex-end;
@@ -212,12 +241,12 @@ body{
 
 #start{
     width: 500px;
-    z-index: 10;
     position: relative;
+    z-index: -1;
     transform-origin: center bottom;
     animation: bounce 1s linear infinite;
-    /* animation-fill-mode: backwards; */
     animation-direction: alternate;
+
 }
 @keyframes bounce {
     0% {transform: scale(0.9);}
@@ -225,13 +254,65 @@ body{
 
 }
 
-#book{
-    width: 100%;
-    position: relative;
-    top: 150px;
+
+#category-cards{
+  list-style-type: none;
+  padding-bottom: 30px;
+  padding-right: 10px;
+  height: 325px;
+  display: none;
+  column-gap: 2%;
+  justify-content: center;
 }
-#content{
-    background: url(../assets/images/open-book.png);
+#category-cards .cards{
+  max-width: 125px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#category-cards img{
+  background-color: var(--cream);
+}
+.categoryTitle{
+  font-family: 'Changa One';
+    background-color: var(--purple);
+    color:  var(--cream);
+    letter-spacing: 0.05em;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+.quantity{
+  background-color:  var(--cream);
+  text-align: center;
+  width: 100%;
+  font-family: 'Changa One';
+  color: var(--purple);
+}
+.stars{
+  background-color:  var(--cream);
+  padding: 10px;
+  width: 100%;
+}
+.triangle{
+  background-color:  var(--cream);;
+  padding: 10px;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+.actionsII,
+.animalsII,
+.emotions,
+.vegetables{
+ align-self: flex-end;
+}
+.shaddow{
+  padding: 5px;
+  width: 101px;
+  background-color: var(--darkGreen);
+  height: 22px;
+  border-radius: 50%;
+  filter: blur(10px);
+  z-index: -1;
 }
 
 @media only screen and (max-width: 768px) {
