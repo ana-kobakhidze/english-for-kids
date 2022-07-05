@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@900&display=swap');
+:root{
+    --black: #010001;
+    --purple: #854f94;
+    --pink: #edc4d9;
+    --white: #FFFFFF;
+    --cream: #F1E2EF;
+    --darkGreen: #1d4e00;
+    --actionsI: #6CA342;
+    --actionsII: #F58720;
+    --animalsI: #ED264E;
+    --animalsII: #F4A737;
+    --clothes: #78C486;
+    --emotions: #934D9D;
+    --fruits: #FF5671;
+    --vegetables: #7761D3;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background: url(../../assets/images/cards-background.png) no-repeat;
+    background-color: var(--black);
+    background-position-x: center;
+}
+#main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.infoContainer,
+.backinfoContainer{
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    bottom: 4px;
+}
+#title-heading{
+    font-family: 'Changa One', cursive;
+    font-size: 2.1rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.2;
+    color: var(--cream);
+    border-radius: 15px;
+    padding: 0 21px;
+    margin-top: 57px;
+}
+.flip-inner{
+    display: flex;
+    justify-content: center;
+
+}
+
+#card{
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+    row-gap: 27px;
+    column-gap: 7%;
+    justify-content: space-around;
+    perspective: 1000px;
+}
+.container {
+    transition: transform 1s;
+    transform-style: preserve-3d;
+  }
+.word{
+    font-family: 'Changa One', cursive;
+    font-size: 1.3rem;
+    color: white;
+}
+.translation{
+    font-size: 1.3rem;
+    font-family: 'Noto Serif Georgian', serif;
+    color: white;
+}
+#card-container{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    padding-bottom: 100px;
+    height: 100%;
+    align-items: center;
+    background-color: rgba(100, 100, 100, 0.3);
+    border-radius: 10px;
+}
+.back,
+.front{
+    backface-visibility: hidden;
+}
+.flip,
+.audio{
+    width: 23px;
+    cursor:pointer;
+}
+
+
+#footer{
+    z-index: -1;
+    position: fixed;
+}
+.back{
+        position: absolute;   
+         bottom: 0;
+        top: 0;
+        transform: rotateY( -180deg );
+
+}

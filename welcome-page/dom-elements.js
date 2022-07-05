@@ -4,3 +4,6 @@ export const CATEGORYLIST = document.querySelector('.menu-items');
 export const CATEGORIES = document.querySelector("#category-cards");
 export const OVERLAY = document.querySelector("#overlay");
 export const MENU = document.querySelector("#checkbox");
+export const CARD = document.querySelector("#card");
+export const TITLE = document.querySelector("#title-heading");
+// export const FLIPCARD = document.querySelector(".flip-inner");

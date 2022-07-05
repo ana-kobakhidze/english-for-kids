@@ -1,52 +1,52 @@
 const cards = [ 
     ['Actions I', 'Actions II', 'Animals I', 'Animals II', 'Clothes', 'Emotions', 'Fruits', 'Vegetables'],
-    [
-      {
+    [ 
+      { 
         word: 'cry',
         translation: 'ტირილი',
-        image: 'img/cry.png',
+        image: 'images/cry.png',
         audioSrc: 'audio/cry.mp3'
       },
       {
         word: 'dance',
         translation: 'ცეკვა',
-        image: 'img/dance.png',
+        image: 'images/dance.png',
         audioSrc: 'audio/dance.mp3'
       },
       {
         word: 'dive',
         translation: 'ყვინთვა',
-        image: 'img/dive.png',
+        image: 'images/dive.png',
         audioSrc: 'audio/dive.mp3'
       },
       {
         word: 'draw',
         translation: 'ხატვა',
-        image: 'img/draw.png',
+        image: 'images/draw.png',
         audioSrc: 'audio/draw.mp3'
       },
       {
         word: 'fish',
         translation: 'თევზაობა',
-        image: 'img/fish.png',
+        image: 'images/fish.png',
         audioSrc: 'audio/fish.mp3'
       },
       {
         word: 'fly',
         translation: 'ფრენა',
-        image: 'img/fly.png',
+        image: 'images/fly.png',
         audioSrc: 'audio/fly.mp3'
       },
       {
         word: 'hug',
         translation: 'ჩახუტება',
-        image: 'img/hug.png',
+        image: 'images/hug.png',
         audioSrc: 'audio/hug.mp3'
       },
       {
         word: 'jump',
         translation: 'ხტუნვა',
-        image: 'img/jump.png',
+        image: 'images/jump.png',
         audioSrc: 'audio/jump.mp3'
       }
     ],
@@ -54,49 +54,49 @@ const cards = [
       {
         word: 'open',
         translation: 'გაღება',
-        image: 'img/open.png',
+        image: 'images/open.png',
         audioSrc: 'audio/open.mp3'
       },
       {
         word: 'play',
         translation: 'თამაში',
-        image: 'img/play.png',
+        image: 'images/play.png',
         audioSrc: 'audio/play.mp3'
       },
       {
         word: 'point',
         translation: 'მინიშნება',
-        image: 'img/point.png',
+        image: 'images/point.png',
         audioSrc: 'audio/point.mp3'
       },
       {
         word: 'ride',
         translation: 'ტარება',
-        image: 'img/ride.png',
+        image: 'images/ride.png',
         audioSrc: 'audio/ride.mp3'
       },
       {
         word: 'run',
         translation: 'სირბილი',
-        image: 'img/run.png',
+        image: 'images/run.png',
         audioSrc: 'audio/run.mp3'
       },
       {
         word: 'sing',
         translation: 'მღერა',
-        image: 'img/sing.png',
+        image: 'images/sing.png',
         audioSrc: 'audio/sing.mp3'
       },
       {
         word: 'skip',
         translation: 'ხტუნაობა',
-        image: 'img/skip.png',
+        image: 'images/skip.png',
         audioSrc: 'audio/skip.mp3'
       },
       {
         word: 'swim',
         translation: 'ცურვა',
-        image: 'img/swim.png',
+        image: 'images/swim.png',
         audioSrc: 'audio/swim.mp3'
       }
     ],
@@ -104,49 +104,49 @@ const cards = [
       {
         word: 'cat',
         translation: 'კატა',
-        image: 'img/cat.png',
+        image: 'images/cat.png',
         audioSrc: 'audio/cat.mp3'
       },
       {
         word: 'chick',
         translation: 'წიწილა',
-        image: 'img/chick.png',
+        image: 'images/chick.png',
         audioSrc: 'audio/chick.mp3'
       },
       {
         word: 'chicken',
         translation: 'ქათამი',
-        image: 'img/chicken.png',
+        image: 'images/chicken.png',
         audioSrc: 'audio/chicken.mp3'
       },
       {
         word: 'dog',
         translation: 'ძაღლი',
-        image: 'img/dog.png',
+        image: 'images/dog.png',
         audioSrc: 'audio/dog.mp3'
       },
       {
         word: 'horse',
         translation: 'ცხენი',
-        image: 'img/horse.png',
+        image: 'images/horse.png',
         audioSrc: 'audio/horse.mp3'
       },
       {
         word: 'pig',
         translation: 'ღორი',
-        image: 'img/pig.png',
+        image: 'images/pig.png',
         audioSrc: 'audio/pig.mp3'
       },
       {
         word: 'rabbit',
         translation: 'კურდღელი',
-        image: 'img/rabbit.png',
+        image: 'images/rabbit.png',
         audioSrc: 'audio/rabbit.mp3'
       },
       {
         word: 'sheep',
         translation: 'ცხვარი',
-        image: 'img/sheep.png',
+        image: 'images/sheep.png',
         audioSrc: 'audio/sheep.mp3'
       }
     ],
@@ -154,49 +154,49 @@ const cards = [
       {
         word: 'bird',
         translation: 'ჩიტი',
-        image: 'img/bird.png',
+        image: 'images/bird.png',
         audioSrc: 'audio/bird.mp3'
       },
       {
         word: 'fish',
         translation: 'თევზი',
-        image: 'img/fish1.png',
+        image: 'images/fish1.png',
         audioSrc: 'audio/fish.mp3'
       },
       {
         word: 'frog',
         translation: 'ბაყაყი',
-        image: 'img/frog.png',
+        image: 'images/frog.png',
         audioSrc: 'audio/frog.mp3'
       },
       {
         word: 'giraffe',
         translation: 'ჟირაფი',
-        image: 'img/giraffe.png',
+        image: 'images/giraffe.png',
         audioSrc: 'audio/giraffe.mp3'
       },
       {
         word: 'lion',
         translation: 'ლომი',
-        image: 'img/lion.png',
+        image: 'images/lion.png',
         audioSrc: 'audio/lion.mp3'
       },
       {
         word: 'mouse',
         translation: 'თაგვი',
-        image: 'img/mouse.png',
+        image: 'images/mouse.png',
         audioSrc: 'audio/mouse.mp3'
       },
       {
         word: 'turtle',
         translation: 'კუ',
-        image: 'img/turtle.png',
+        image: 'images/turtle.png',
         audioSrc: 'audio/turtle.mp3'
       },
       {
         word: 'dolphin',
         translation: 'დელფინი',
-        image: 'img/dolphin.png',
+        image: 'images/dolphin.png',
         audioSrc: 'audio/dolphin.mp3'
       }
     ],
@@ -204,49 +204,49 @@ const cards = [
       {
         word: 'skirt',
         translation: 'ქვედაბოლო',
-        image: 'img/skirt.png',
+        image: 'images/skirt.png',
         audioSrc: 'audio/skirt.mp3'
       },
       {
         word: 'pants',
         translation: 'შარვალი',
-        image: 'img/pants.png',
+        image: 'images/pants.png',
         audioSrc: 'audio/pants.mp3'
       },
       {
         word: 'blouse',
         translation: 'ბლუზა',
-        image: 'img/blouse.png',
+        image: 'images/blouse.png',
         audioSrc: 'audio/blouse.mp3'
       },
       {
         word: 'dress',
         translation: 'კაბა',
-        image: 'img/dress.png',
+        image: 'images/dress.png',
         audioSrc: 'audio/dress.mp3'
       },
       {
         word: 'boot',
         translation: 'ჩექმა',
-        image: 'img/boot.png',
+        image: 'images/boot.png',
         audioSrc: 'audio/boot.mp3'
       },
       {
         word: 'shirt',
         translation: 'მაისური',
-        image: 'img/shirt.png',
+        image: 'images/shirt.png',
         audioSrc: 'audio/shirt.mp3'
       },
       {
         word: 'coat',
         translation: 'ქურთუკი',
-        image: 'img/coat.png',
+        image: 'images/coat.png',
         audioSrc: 'audio/coat.mp3'
       },
       {
         word: 'shoe',
         translation: 'ფეხსაცმელი',
-        image: 'img/shoe.png',
+        image: 'images/shoe.png',
         audioSrc: 'audio/shoe.mp3'
       }
     ],
@@ -254,49 +254,49 @@ const cards = [
       {
         word: 'sad',
         translation: 'მოწყენილი',
-        image: 'img/sad.png',
+        image: 'images/sad.png',
         audioSrc: 'audio/sad.mp3'
       },
       {
         word: 'angry',
         translation: 'გაბრაზებული',
-        image: 'img/angry.png',
+        image: 'images/angry.png',
         audioSrc: 'audio/angry.mp3'
       },
       {
         word: 'happy',
         translation: 'ბედნიერი',
-        image: 'img/happy.png',
+        image: 'images/happy.png',
         audioSrc: 'audio/happy.mp3'
       },
       {
         word: 'tired',
         translation: 'დაღლილი',
-        image: 'img/tired.png',
+        image: 'images/tired.png',
         audioSrc: 'audio/tired.mp3'
       },
       {
         word: 'surprised',
         translation: 'გაკვირვებული',
-        image: 'img/surprised.png',
+        image: 'images/surprised.png',
         audioSrc: 'audio/surprised.mp3'
       },
       {
         word: 'scared',
         translation: 'შეშინებული',
-        image: 'img/scared.png',
+        image: 'images/scared.png',
         audioSrc: 'audio/scared.mp3'
       },
       {
         word: 'smile',
         translation: 'ღიმილი',
-        image: 'img/smile.png',
+        image: 'images/smile.png',
         audioSrc: 'audio/smile.mp3'
       },
       {
         word: 'laugh',
         translation: 'სიცილი',
-        image: 'img/laugh.png',
+        image: 'images/laugh.png',
         audioSrc: 'audio/laugh.mp3'
       }
     ],
@@ -304,49 +304,49 @@ const cards = [
       {
         word: 'apple',
         translation: 'ვაშლი',
-        image: 'img/apple.png',
+        image: 'images/apple.png',
         audioSrc: 'audio/apple.mp3'
       },
       {
         word: 'melon',
         translation: 'ნესვი',
-        image: 'img/melon.png',
+        image: 'images/melon.png',
         audioSrc: 'audio/melon.mp3'
       },
       {
         word: 'feijoa',
         translation: 'ფეიხოა',
-        image: 'img/feijoa.png',
+        image: 'images/feijoa.png',
         audioSrc: 'audio/feijoa.mp3'
       },
       {
         word: 'fig',
         translation: 'ლეღვი',
-        image: 'img/fig.png',
+        image: 'images/fig.png',
         audioSrc: 'audio/fig.mp3'
       },
       {
         word: 'peach',
         translation: 'ატამი',
-        image: 'img/peach.png',
+        image: 'images/peach.png',
         audioSrc: 'audio/peach.mp3'
       },
       {
         word: 'avocado',
         translation: 'ავოკადო',
-        image: 'img/avocado.png',
+        image: 'images/avocado.png',
         audioSrc: 'audio/avocado.mp3'
       },
       {
         word: 'grape',
         translation: 'ყურძენი',
-        image: 'img/grape.png',
+        image: 'images/grape.png',
         audioSrc: 'audio/grape.mp3'
       },
       {
         word: 'blackberry',
         translation: 'მაყვალი',
-        image: 'img/blackberry.png',
+        image: 'images/blackberry.png',
         audioSrc: 'audio/blackberry.mp3'
       }
     ],
@@ -354,49 +354,49 @@ const cards = [
       {
         word: 'lettuce',
         translation: 'სალათა',
-        image: 'img/apple.png',
+        image: 'images/lettuce.png',
         audioSrc: 'audio/lettuce.mp3'
       },
       {
         word: 'cauliflower',
         translation: 'ყვავილოვანი',
-        image: 'img/melon.png',
+        image: 'images/cauliflower.png',
         audioSrc: 'audio/cauliflower.mp3'
       },
       {
         word: 'pepper',
         translation: 'წიწაკა',
-        image: 'img/feijoa.png',
+        image: 'images/pepper.png',
         audioSrc: 'audio/pepper.mp3'
       },
       {
         word: 'pumpkin',
         translation: 'გოგრა',
-        image: 'img/fig.png',
+        image: 'images/fig.png',
         audioSrc: 'audio/pumpkin.mp3'
       },
       {
         word: 'tomato',
         translation: 'პამიდორი',
-        image: 'img/peach.png',
+        image: 'images/pumpkin.png',
         audioSrc: 'audio/tomato.mp3'
       },
       {
         word: 'carrot',
         translation: 'სტაფილო',
-        image: 'img/avocado.png',
+        image: 'images/carrot.png',
         audioSrc: 'audio/carrot.mp3'
       },
       {
         word: 'onion',
         translation: 'ხახვი',
-        image: 'img/grape.png',
+        image: 'images/onion.png',
         audioSrc: 'audio/onion.mp3'
       },
       {
         word: 'garlic',
         translation: 'ნიორი',
-        image: 'img/blackberry.png',
+        image: 'images/garlic.png',
         audioSrc: 'audio/garlic.mp3'
       }
     ]
