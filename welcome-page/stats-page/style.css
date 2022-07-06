@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Changa+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@900&display=swap');
 :root{
     --black: #010001;
     --purple: #854f94;
@@ -25,22 +26,21 @@
 }
 
 body{
-    background: url(../assets/images/juno.png) no-repeat;
+    background: url(../../assets/images/cards-background.png) no-repeat;
     background-color: var(--black);
     background-position-x: center;
 }
-#wrapper{
-    height: 100vh;
+#statsWrapper{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-content: center;
+    align-items: center;
 }
 #header{
     display: flex;
     column-gap: 70%;
     justify-content: space-around;
     margin-top: 70px;
+    width: 100%;
 }
 
 .checkbox {
@@ -167,8 +167,8 @@ body{
     right: 0;
     bottom: 0;
     background-color:var(--white);
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
+    -webkit-transition: .4s;
+    transition: .4s;
   }
   .slider:before {
     position: absolute;
@@ -178,8 +178,8 @@ body{
     left: 4px;
     bottom: 4px;
     background-color: var(--purple);
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
+    -webkit-transition: .4s;
+    transition: .4s;
   }
   input:checked + .slider {
     background-color: var(--purple);
@@ -232,100 +232,7 @@ body{
   #switch input:checked~.labels::before {
     opacity: 1;
   }
-#footer{
-    flex-basis: 50%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-
-#start{
-    width: 500px;
-    position: relative;
+  #footer{
     z-index: -1;
-    transform-origin: center bottom;
-    animation: bounce 1s linear infinite;
-    animation-direction: alternate;
-
-}
-@keyframes bounce {
-    0% {transform: scale(0.9);}
-   100% {transform: scaleY(1);}
-
-}
-
-
-#category-cards{
-  list-style-type: none;
-  padding-bottom: 30px;
-  padding-right: 10px;
-  height: 325px;
-  display: none;
-  column-gap: 2%;
-  justify-content: center;
-}
-#category-cards .cards{
-  max-width: 125px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#category-cards img{
-  background-color: var(--cream);
-}
-.categoryTitle{
-  font-family: 'Changa One';
-    background-color: var(--purple);
-    color:  var(--cream);
-    letter-spacing: 0.05em;
-    width: 100%;
-    text-align: center;
-    padding: 5px;
-}
-.quantity{
-  background-color:  var(--cream);
-  text-align: center;
-  width: 100%;
-  font-family: 'Changa One';
-  color: var(--purple);
-}
-.stars{
-  background-color:  var(--cream);
-  padding: 10px;
-  width: 100%;
-}
-.triangle{
-  background-color:  var(--cream);;
-  padding: 10px;
-  clip-path: polygon(50% 100%, 0 0, 100% 0);
-}
-.actionsII,
-.animalsII,
-.emotions,
-.vegetables{
- align-self: flex-end;
-}
-.shaddow{
-  padding: 5px;
-  width: 101px;
-  background-color: var(--darkGreen);
-  height: 22px;
-  border-radius: 50%;
-  filter: blur(10px);
-  z-index: -1;
-}
-
-@media only screen and (max-width: 768px) {
-
-    #header{
-        column-gap: 70%;
-    }
-
-}
-@media only screen and (max-width: 320px) {
-
-    #header{
-        column-gap: 50%;
-    }
-
+    position: fixed;
 }
