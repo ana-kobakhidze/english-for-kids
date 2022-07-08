@@ -1,6 +1,8 @@
 export const STARTBTN = document.getElementById("startBtn");
-export const SWITCHBTN = document.getElementById("checkbox");
-export const CATEGORYLIST = document.querySelector('.menu-items');
 export const CATEGORIES = document.querySelector("#category-cards");
-export const OVERLAY = document.querySelector("#overlay");
-export const MENU = document.querySelector("#checkbox");
+
+export const CARD = document.querySelector("#card");
+export const TITLE = document.querySelector("#title-heading");
+export const WRAPPER = document.querySelector("#wrapper");
+export const CARD_PAGE_WRAPPER = document.querySelector("#main");
+export const STATS_PAGE_WRAPPER = document.querySelector("#statsWrapper");
