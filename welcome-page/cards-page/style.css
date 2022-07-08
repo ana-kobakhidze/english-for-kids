@@ -312,3 +312,18 @@ body{
         transform: rotateY( -180deg );
 
 }
+
+@media only screen and (max-width: 768px) {
+
+  #header{
+      column-gap: 70%;
+  }
+
+}
+@media only screen and (max-width: 320px) {
+
+  #header{
+      column-gap: 50%;
+  }
+
+}
