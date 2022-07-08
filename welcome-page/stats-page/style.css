@@ -15,6 +15,8 @@
     --emotions: #934D9D;
     --fruits: #FF5671;
     --vegetables: #7761D3;
+    --red: #d3275c;
+    --blue: #4686ae;
 
 }
 
@@ -232,7 +234,100 @@ body{
   #switch input:checked~.labels::before {
     opacity: 1;
   }
+  #contentWrapper{
+    display: flex;
+    width: 70%;
+    justify-content: flex-start;
+  }
+  #tableWrapper{
+    width: 100%;
+    padding-bottom: 100px;
+    height: 657px;
+    overflow: scroll;
+    background-color: rgba(100, 100, 100, 0.3);
+    border-radius: 10px;
+    margin-top: 32px;
+  }
+  #buttons{
+    position: relative;
+    top: 239px;
+    height: 43px;
+    width: 44px;
+    display: flex;
+    transform: rotate(270deg);
+  
+  }
+  .red,
+  .blue{
+    border: none;
+    border-radius: 10px 10px 0 0;
+    color: var(--cream);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Changa One', cursive;
+  }
+  .red{
+    background-color: var(--red);
+  }
+  .blue{
+    background-color: var(--blue);
+  }
+  table{
+    width:100%;
+    border-collapse: collapse;
+    overflow: scroll;
+  }
+  .theader{
+    background-color: var(--cream);
+    position: sticky;
+    top: 0;
+    
+  }
+  .theader th{
+    color: var(--purple);
+    font-family: 'Changa One', cursive;
+    font-size: 1.3em;
+    padding:10px;
+
+  }
+  .georgian{
+    font-family: 'Noto Serif Georgian', serif;
+  }
+  .rowInfo{
+    color: var(--cream);
+    font-family: 'Changa One', cursive;
+    font-size: 0.9em;
+    text-align: center;
+    border-bottom: 0.1px groove var(--cream);
+  }
+  .rowInfo td{
+    padding: 20px;
+  }
+  .first{
+    border-radius: 10px 0 0 0;
+  }
+  .last{
+    border-radius: 0 10px 0 0;
+  }
   #footer{
     z-index: -1;
     position: fixed;
+}
+@media only screen and (max-width: 768px) {
+
+  #header{
+      column-gap: 70%;
+  }
+
+}
+@media only screen and (max-width: 320px) {
+
+  #header{
+      column-gap: 50%;
+  }
+  #buttons{
+    left: calc(70% - 308px);
+  }
+
 }
