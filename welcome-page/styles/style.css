@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa+One&display=swap');
+:root{
+    --black: #010001;
+    --purple: #854f94;
+    --pink: #edc4d9;
+    --white: #FFFFFF;
+    --cream: #F1E2EF;
+    --darkGreen: #1d4e00;
+    --actionsI: #6CA342;
+    --actionsII: #F58720;
+    --animalsI: #ED264E;
+    --animalsII: #F4A737;
+    --clothes: #78C486;
+    --emotions: #934D9D;
+    --fruits: #FF5671;
+    --vegetables: #7761D3;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background: url(../assets/images/juno.png) no-repeat;
+    background-color: var(--black);
+    background-position-x: center;
+}
+#wrapper{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+}
+#header{
+    display: flex;
+    column-gap: 70%;
+    justify-content: space-around;
+    margin-top: 70px;
+}
+
+.checkbox {
+    position: fixed;
+    display: block;
+    height: 36px;
+    width: 49px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+#menu-icon{
+    position: relative;
+    width: 51px;
+    height: 40px;
+    display: flex;
+    row-gap: 10px;
+    flex-direction: column;
+    z-index: 4;
+}
+.line{
+    height: 12px;
+    border-radius: 5px;
+    background: var(--purple);
+}
+#menu-icon .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  #menu-icon .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  #menu-icon .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+  .menu-items {
+    padding-top: 154px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 316px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 81px;
+    text-align: left;
+    background-color: var(--purple);
+    z-index: 3;
+    transform: translate(-150%);
+    transition: transform 0.5s ease-in-out;
+  }
+  .menu-items a{
+    text-decoration: none;
+    color: var(--pink);
+    font-family: 'Changa One', cursive;
+    letter-spacing: 0.3px;
+  }
+  .menu-items a:hover{
+    color: var(--cream);
+    cursor: pointer;
+  }
+ .menu-items li {
+    list-style-type: none;
+    margin-bottom: 1.6rem;
+    font-size: 1.8rem;
+
+  }
+  #overlay{
+    opacity: 0;
+    position: unset;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.4);
+    cursor: pointer;
+  }
+
+  #menu input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+  #menu input[type="checkbox"]:checked ~ #overlay {
+    opacity:1;
+    position:absolute;
+  }
+#menu input[type="checkbox"]:checked ~ #menu-icon .line1 {
+    background-color: var(--pink);
+    transform: rotate(45deg);
+  }
+  
+#menu input[type="checkbox"]:checked ~ #menu-icon .line2 {
+    transform: scaleY(0);
+  }
+  
+#menu input[type="checkbox"]:checked ~ #menu-icon .line3 {
+    background-color: var(--pink);
+    transform: rotate(-45deg);
+  }
+
+#switch {
+    position: relative;
+    display: inline-block;
+    width: 95px;
+    height: 40px;
+  }
+
+#switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:var(--white);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 32px;
+    width: 32px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--purple);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  input:checked + .slider {
+    background-color: var(--purple);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    background-color: var(--pink);
+    transform: translateX(53px);
+  }
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+#switch .labels::after {
+    content: attr(data-off);
+    position: absolute;
+    top: 11px;
+    right: 10px;
+    color: var(--purple);
+    opacity: 1;
+    font-family: 'Changa One', cursive;
+    letter-spacing: 0.3px;
+    transition: all 0.4s ease-in-out;
+  }
+  #switch .labels::before {
+    content: attr(data-on);
+    position: absolute;
+    top:11px;
+    left: 10px;
+    font-family: 'Changa One', cursive;
+    letter-spacing: 0.3px;
+    color: var(--pink);
+    opacity: 0;
+
+    transition: all 0.4s ease-in-out;
+  }
+  #switch input:checked~.labels::after {
+    opacity: 0;
+  }
+
+  #switch input:checked~.labels::before {
+    opacity: 1;
+  }
+#footer{
+    flex-basis: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+#startBtn{
+  cursor: pointer;
+}
+#start{
+    width: 500px;
+    position: relative;
+    z-index: -1;
+    transform-origin: center bottom;
+    animation: bounce 1s linear infinite;
+    animation-direction: alternate;
+
+}
+@keyframes bounce {
+    0% {transform: scale(0.9);}
+   100% {transform: scaleY(1);}
+
+}
+
+
+#category-cards{
+  list-style-type: none;
+  padding-bottom: 30px;
+  padding-right: 10px;
+  height: 325px;
+  display: none;
+  column-gap: 2%;
+  justify-content: center;
+}
+#category-cards .cards{
+  max-width: 125px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cards{
+  animation: skip 0.7s 0s infinite alternate ease-in-out forwards;
+  transition: transform .2s;
+  animation-play-state: paused;
+}
+.cards:hover{
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+@keyframes skip{
+  0%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(6px);
+  }
+}
+
+#category-cards img{
+  background-color: var(--cream);
+}
+
+.categoryTitle{
+  font-family: 'Changa One';
+    background-color: var(--purple);
+    color:  var(--cream);
+    letter-spacing: 0.05em;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+
+.quantity{
+  background-color:  var(--cream);
+  text-align: center;
+  width: 100%;
+  font-family: 'Changa One';
+  color: var(--purple);
+}
+.cards:hover .quantity{
+  font-size: 1.5rem;
+}
+.stars{
+  background-color:  var(--cream);
+  padding: 10px;
+  width: 100%;
+}
+.triangle{
+  background-color:  var(--cream);;
+  padding: 10px;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+.actionsII,
+.animalsII,
+.emotions,
+.vegetables{
+ align-self: flex-end;
+}
+.shaddow{
+  padding: 5px;
+  width: 101px;
+  background-color: var(--darkGreen);
+  height: 22px;
+  border-radius: 50%;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+@media only screen and (max-width: 768px) {
+
+    #header{
+        column-gap: 70%;
+    }
+
+}
+@media only screen and (max-width: 320px) {
+
+    #header{
+        column-gap: 50%;
+    }
+
+}
