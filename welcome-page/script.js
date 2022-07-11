@@ -17,7 +17,7 @@ import { toggleModes } from "./toggle-mode";
 // starter page
 if (
   location.href ===
-  "file:///Users/ana/english-for-kids/english-for-kids/dist/index.html"
+  "https://ana-kobakhidze.github.io/english-for-kids/dist/index.html"
 ) {
   WRAPPER.insertBefore(header(), WRAPPER.firstChild);
   CARD_CONTENT.appendChild(starter());
@@ -31,7 +31,7 @@ if (
 /// cards page
 if (
   location.href ===
-  "file:///Users/ana/english-for-kids/english-for-kids/dist/index-cards.html"
+  "https://ana-kobakhidze.github.io/english-for-kids/dist/index-cards.html"
 ) {
   CARD_PAGE_WRAPPER.insertBefore(header(), CARD_PAGE_WRAPPER.firstChild);
   toggleModes();
@@ -40,7 +40,7 @@ if (
 /// stats page
 if (
   location.href ===
-  "file:///Users/ana/english-for-kids/english-for-kids/dist/statistics.html"
+  "https://ana-kobakhidze.github.io/english-for-kids/dist/statistics.html"
 ) {
   STATS_PAGE_WRAPPER.insertBefore(header(), STATS_PAGE_WRAPPER.firstChild);
   TABLE.appendChild(statsContent());
