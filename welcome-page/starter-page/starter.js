@@ -21,7 +21,7 @@ export const starter = (toggleState) => {
     
     listItems.addEventListener("click", () => {
       location.href =
-        "file:///Users/ana/english-for-kids/english-for-kids/dist/index-cards.html";
+        "https://ana-kobakhidze.github.io/english-for-kids/index-cards.html";
       localStorage.setItem("category", title);
     });
    // TITLE

@@ -97,7 +97,7 @@ const listItem = (menuItems) => {
     listcategories.appendChild(item);
     listcategories.addEventListener("click", () => {
       location.href =
-        "file:///Users/ana/english-for-kids/english-for-kids/dist/index-cards.html";
+        "https://ana-kobakhidze.github.io/english-for-kids/index-cards.html";
       localStorage.setItem("category", title);
     });
     menuItems.appendChild(listcategories);
