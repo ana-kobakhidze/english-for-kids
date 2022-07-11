@@ -238,7 +238,9 @@ body{
     align-items: flex-end;
     justify-content: center;
 }
-
+#startBtn{
+  cursor: pointer;
+}
 #start{
     width: 500px;
     position: relative;
@@ -270,9 +272,29 @@ body{
   flex-direction: column;
   align-items: center;
 }
+.cards{
+  animation: skip 0.7s 0s infinite alternate ease-in-out forwards;
+  transition: transform .2s;
+  animation-play-state: paused;
+}
+.cards:hover{
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+@keyframes skip{
+  0%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(6px);
+  }
+}
+
 #category-cards img{
   background-color: var(--cream);
 }
+
 .categoryTitle{
   font-family: 'Changa One';
     background-color: var(--purple);
@@ -282,12 +304,16 @@ body{
     text-align: center;
     padding: 5px;
 }
+
 .quantity{
   background-color:  var(--cream);
   text-align: center;
   width: 100%;
   font-family: 'Changa One';
   color: var(--purple);
+}
+.cards:hover .quantity{
+  font-size: 1.5rem;
 }
 .stars{
   background-color:  var(--cream);

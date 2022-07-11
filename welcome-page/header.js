@@ -59,6 +59,7 @@ export const header = () => {
   const switchBox = document.createElement("input");
   switchBox.type = "checkbox";
   switchBox.name = "checkbox";
+  switchBox.classList.add("switchBox");
   label.appendChild(switchBox);
 
   const slider = document.createElement("span");

@@ -1,17 +1,22 @@
-import { extendedCards } from "../cards-methods";
-
 export const statsContent = () => {
   let fragment = new DocumentFragment();
 
-  const keys = Object.keys(extendedCards);
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const toggle = document.querySelectorAll('.switchBox')[0];
+    toggle.addEventListener('toogleChanged',(ev) => {
+      console.log(ev.detail);
+    })
+  });
+  
+  const statsJson = localStorage.getItem("stats");
+  const stats = JSON.parse(statsJson);
 
-  keys.forEach((item) => {
-    extendedCards[item].forEach((element) => {
+  stats.forEach((element) => {
       const tr = document.createElement("tr");
       tr.classList.add("rowInfo");
 
       const title = document.createElement("td");
-      title.innerHTML = item;
+      title.innerHTML = element.category;
       tr.appendChild(title);
 
       const word = document.createElement("td");
@@ -24,15 +29,15 @@ export const statsContent = () => {
       tr.appendChild(translation);
 
       const clicks = document.createElement("td");
-      clicks.innerHTML = 0;
+      clicks.innerHTML = element.clicks;
       tr.appendChild(clicks);
 
       const correct = document.createElement("td");
-      correct.innerHTML = 0;
+      correct.innerHTML = element.correct;
       tr.appendChild(correct);
 
       const incorrect = document.createElement("td");
-      incorrect.innerHTML = 0;
+      incorrect.innerHTML = element.wrong;
       tr.appendChild(incorrect);
 
       const errors = document.createElement("td");
@@ -41,6 +46,5 @@ export const statsContent = () => {
       fragment.appendChild(tr);
     });
     
-  });
   return fragment;
 };
