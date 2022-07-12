@@ -8,14 +8,14 @@ import {
   STATS_PAGE_WRAPPER,
   TABLE
 } from "./dom-elements";
-import { statsContent } from "./stats-page/stats";
+import { statsContent } from "./stats";
 import { header } from "./header";
-import { starter } from "./starter-page/starter";
-import { cardsPage } from "./cards-page/cards-page";
+import { starter } from "./starter";
+import { cardsPage } from "./cards-page";
 import { toggleModes } from "./toggle-mode";
 
 // starter page
-if (location.href.includes("dist/index.html")) {
+if (location.href.includes("index.html")) {
   WRAPPER.insertBefore(header(), WRAPPER.firstChild);
   CARD_CONTENT.appendChild(starter());
   STARTBTN.addEventListener("click", () => {

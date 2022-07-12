@@ -46,6 +46,8 @@ module.exports = {
       patterns: [
         { from: "assets", to: "assets" },
         { from: "welcome-page/styles", to: "css" },
+        { from: "welcome-page/styles/cards-page/style.css", to: "css/cards-page"},
+        { from: "welcome-page/styles/stats-page/style.css", to: "css/stats-page"}
       ],
     }),
     new MiniCssExtractPlugin({

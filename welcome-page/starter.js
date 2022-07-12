@@ -1,6 +1,6 @@
-import cards from "../cards";
-import  { CATEGORIES } from "../dom-elements";
-import { concatTitle } from '../cards-methods';
+import cards from "./cards";
+import  { CATEGORIES } from "./dom-elements";
+import { concatTitle } from './cards-methods';
 
 const categoryTitles = cards[0];
 
@@ -21,6 +21,7 @@ export const starter = (toggleState) => {
     
     listItems.addEventListener("click", () => {
       location.href = window.location.origin + 
+      //"/Users/ana/english-for-kids/english-for-kids/dist/index-cards.html";
         "ana-kobakhidze.github.io/english-for-kids/index-cards.html";
       localStorage.setItem("category", title);
     });
@@ -31,7 +32,7 @@ export const starter = (toggleState) => {
     cardTitle.innerHTML = title.toUpperCase();
    // IMAGE
     const image = document.createElement("img");
-    image.src = `../assets/images/${concatTitle(title)}.png`;
+    image.src = `./assets/images/${concatTitle(title)}.png`;
     image.alt = `${title}`;
   // QUANTITY
     const quantity = document.createElement("h3");
@@ -40,7 +41,7 @@ export const starter = (toggleState) => {
     quantity.style.color = `var(--${concatTitle(title)})`;
   // STARS
     const stars = document.createElement("img");
-    stars.src = "../assets/images/stars.svg";
+    stars.src = "./assets/images/stars.svg";
     stars.alt = "stars";
     stars.classList.add("stars");
   // triangle

@@ -1,7 +1,7 @@
-import cards from "../cards";
-import { TITLE } from "../dom-elements";
-import { concatTitle, extendedCards } from "../cards-methods";
-import { openModal } from "../result-modals/modal";
+import cards from "./cards";
+import { TITLE } from "./dom-elements";
+import { concatTitle, extendedCards } from "./cards-methods";
+import { openModal } from "./modal";
 
 let results = [];
 
@@ -45,8 +45,8 @@ const starsProgress = (state) => {
   const star = document.createElement("img");
   star.classList.add(state ? "success-star" : "failure-star");
   star.src = state
-    ? "../assets/images/success-star.svg"
-    : "../assets/images/failure-star.svg";
+    ? "./assets/images/success-star.svg"
+    : "./assets/images/failure-star.svg";
   star.alt = state ? "success-star" : "failure-star";
   container.appendChild(star);
   starParent.appendChild(container);
@@ -64,7 +64,7 @@ const attachCardClickHandlers = () => {
 const handleTrainingCardClick = (word) => {
   const availableCards = JSON.parse(localStorage.getItem("availableCards"));
   const cardData = availableCards.find((c) => c.word === word);
-  const sound = new Audio("../assets/" + `${cardData.audioSrc}`);
+  const sound = new Audio("assets/" + `${cardData.audioSrc}`);
   sound.play();
   const stat = getStat(word);
   stat.clicks++;
@@ -93,7 +93,7 @@ const makeMove = (word) => {
     const stat = getStat(word);
     //correct guess flow
     if (word === currentWord.word) {
-      const successSound = new Audio("../assets/audio/success.mp3");
+      const successSound = new Audio("assets/audio/success.mp3");
       successSound.play();
       //update stats
       const currentIndex = currentCards.findIndex((c) => c.word === word);
@@ -115,14 +115,14 @@ const makeMove = (word) => {
       } else {
         //generate next word
         const nextWord = getNextRandomWord();
-        const nextWordAudio = new Audio("../assets/" + `${nextWord.audioSrc}`);
+        const nextWordAudio = new Audio("./assets/" + `${nextWord.audioSrc}`);
         setTimeout(() => {
           nextWordAudio.play();
         }, "2000");
       }
     } else {
       //failed guess flow
-      const failSound = new Audio("../assets/audio/failure.mp3");
+      const failSound = new Audio("./assets/audio/failure.mp3");
       failSound.play();
       starsProgress(false);
       stat.wrong++;
@@ -182,13 +182,13 @@ export const cardsPage = () => {
         }
         const currentWord = getCurrentWord();
         if (currentWord) {
-          const wordSound = new Audio("../assets/" + `${currentWord.audioSrc}`);
+          const wordSound = new Audio("./assets/" + `${currentWord.audioSrc}`);
           wordSound.play();
         } else {
           const nextRandWord = getNextRandomWord();
           updateCurrentWord(nextRandWord);
           const wordSound = new Audio(
-            "../assets/" + `${nextRandWord.audioSrc}`
+            "./assets/" + `${nextRandWord.audioSrc}`
           );
           wordSound.play();
         }
@@ -225,7 +225,7 @@ export const cardsPage = () => {
       container.appendChild(backContainer);
 
       const image = document.createElement("img");
-      image.src = "../assets/" + card.image;
+      image.src = "./assets/" + card.image;
       image.alt = card.word;
 
       image.classList.add("cardImage");
@@ -250,10 +250,10 @@ export const cardsPage = () => {
 
       const soundIcon = document.createElement("img");
       soundIcon.classList.add("audio");
-      soundIcon.src = "../assets/images/audio.svg";
+      soundIcon.src = "./assets/images/audio.svg";
       infoContainer.appendChild(soundIcon);
 
-      const sound = new Audio("../assets/" + `${card.audioSrc}`);
+      const sound = new Audio("./assets/" + `${card.audioSrc}`);
       soundIcon.addEventListener("click", () => {
         sound.currentTime = 0;
         sound.play();
@@ -274,7 +274,7 @@ export const cardsPage = () => {
       backinfoContainer.appendChild(backWord);
 
       const flipIcon = document.createElement("img");
-      flipIcon.src = "../assets/images/flip.svg";
+      flipIcon.src = "./assets/images/flip.svg";
       flipIcon.classList.add("flip");
       flipIcon.addEventListener("click", () => {
         container.style.transform = "rotateY(-180deg)";

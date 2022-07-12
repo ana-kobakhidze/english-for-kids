@@ -14,7 +14,7 @@ const image = document.createElement("img");
 
 export const openModal = (isSuccess) => {
   modal.style.display = "block";
-  image.src = isSuccess ? "../assets/images/win.svg" : "../assets/images/failure.svg";
+  image.src = isSuccess ? "./assets/images/win.svg" : "./assets/images/failure.svg";
   image.alt = isSuccess ? "win" : "failure";
   image.classList.add(isSuccess ? "win" : "failure");
   modalContent.appendChild(image);

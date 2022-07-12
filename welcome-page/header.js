@@ -37,7 +37,8 @@ export const header = () => {
 
   const homeLink = document.createElement("a");
   homeLink.href =
-    "file:///Users/ana/english-for-kids/english-for-kids/dist/index.html";
+          "ana-kobakhidze.github.io/english-for-kids/index.html";
+    //file:///Users/ana/english-for-kids/english-for-kids/dist/index.html";
   homeLink.innerHTML = "Home";
   listItemOne.appendChild(homeLink);
 
@@ -46,7 +47,8 @@ export const header = () => {
 
   const statsLink = document.createElement("a");
   statsLink.href =
-    "file:///Users/ana/english-for-kids/english-for-kids/dist/statistics.html";
+          "ana-kobakhidze.github.io/english-for-kids/statistics.html";
+    //"file:///Users/ana/english-for-kids/english-for-kids/dist/statistics.html";
   statsLink.innerHTML = "Statistics";
   listItemTwo.appendChild(statsLink);
   listItem(menuItems);
