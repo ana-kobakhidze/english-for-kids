@@ -36,9 +36,7 @@ export const header = () => {
   menuItems.appendChild(listItemOne);
 
   const homeLink = document.createElement("a");
-  homeLink.href =
-          "ana-kobakhidze.github.io/english-for-kids/index.html";
-    //file:///Users/ana/english-for-kids/english-for-kids/dist/index.html";
+  homeLink.href = "https://ana-kobakhidze.github.io/english-for-kids/index.html";
   homeLink.innerHTML = "Home";
   listItemOne.appendChild(homeLink);
 
@@ -46,9 +44,7 @@ export const header = () => {
   menuItems.appendChild(listItemTwo);
 
   const statsLink = document.createElement("a");
-  statsLink.href =
-          "ana-kobakhidze.github.io/english-for-kids/statistics.html";
-    //"file:///Users/ana/english-for-kids/english-for-kids/dist/statistics.html";
+  statsLink.href = "https://ana-kobakhidze.github.io/english-for-kids/statistics.html";
   statsLink.innerHTML = "Statistics";
   listItemTwo.appendChild(statsLink);
   listItem(menuItems);
@@ -98,8 +94,7 @@ const listItem = (menuItems) => {
     item.innerHTML = title;
     listcategories.appendChild(item);
     listcategories.addEventListener("click", () => {
-      location.href = window.location.origin + 
-        "ana-kobakhidze.github.io/english-for-kids/index-cards.html";
+      location.href = "https://ana-kobakhidze.github.io/english-for-kids/index-cards.html";
       localStorage.setItem("category", title);
     });
     menuItems.appendChild(listcategories);

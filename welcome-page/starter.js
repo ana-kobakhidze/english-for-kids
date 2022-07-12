@@ -20,9 +20,7 @@ export const starter = (toggleState) => {
     listItems.classList.add("cards", `${concatTitle(title)}`);
     
     listItems.addEventListener("click", () => {
-      location.href = window.location.origin + 
-      //"/Users/ana/english-for-kids/english-for-kids/dist/index-cards.html";
-        "ana-kobakhidze.github.io/english-for-kids/index-cards.html";
+      location.href = "https://ana-kobakhidze.github.io/english-for-kids/index-cards.html";;
       localStorage.setItem("category", title);
     });
    // TITLE

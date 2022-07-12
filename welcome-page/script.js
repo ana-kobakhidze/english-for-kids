@@ -15,7 +15,7 @@ import { cardsPage } from "./cards-page";
 import { toggleModes } from "./toggle-mode";
 
 // starter page
-if (location.href.includes("index.html")) {
+if (location.href === "https://ana-kobakhidze.github.io/english-for-kids/index.html") {
   WRAPPER.insertBefore(header(), WRAPPER.firstChild);
   CARD_CONTENT.appendChild(starter());
   STARTBTN.addEventListener("click", () => {
@@ -26,13 +26,13 @@ if (location.href.includes("index.html")) {
 }
 
 /// cards page
-if (location.href.includes("index-cards.html")) {
+if (location.href === "https://ana-kobakhidze.github.io/english-for-kids/index-cards.html") {
   CARD_PAGE_WRAPPER.insertBefore(header(), CARD_PAGE_WRAPPER.firstChild);
   toggleModes();
   CARD.appendChild(cardsPage());
 }
 /// stats page
-if (location.href.includes("statistics.html")) {
+if (location.href ===  "https://ana-kobakhidze.github.io/english-for-kids/statistics.html") {
   STATS_PAGE_WRAPPER.insertBefore(header(), STATS_PAGE_WRAPPER.firstChild);
   TABLE.appendChild(statsContent());
   toggleModes();
