@@ -346,12 +346,30 @@ body{
     #header{
         column-gap: 70%;
     }
-
+    #category-cards{
+    padding-right: 0;
+    height: 689px;
+    padding-bottom: 0;
+    margin-bottom: 17px;
+    width: 409px;
+    column-gap: 4%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    }
 }
-@media only screen and (max-width: 320px) {
 
+@media only screen and (min-width: 320px) {
     #header{
         column-gap: 50%;
+    }
+    #start{
+      width:300px;
+    }
+    #category-cards {
+      margin-bottom: 10px;
+      column-gap: 2%;
+      flex-direction: column;
+      overflow: scroll;
     }
 
 }
