@@ -349,9 +349,19 @@ body{
 
 }
 @media only screen and (max-width: 320px) {
-
     #header{
         column-gap: 50%;
+    }
+    #start{
+      width:300px;
+    }
+    #category-cards {
+      padding-bottom: 0;
+      padding-right: 0;
+      height: 689px;
+      column-gap: 2%;
+      overflow: scroll;
+      justify-content: flex-start;
     }
 
 }
