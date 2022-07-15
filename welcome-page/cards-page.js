@@ -182,9 +182,11 @@ export const cardsPage = () => {
         }
         const currentWord = getCurrentWord();
         if (currentWord) {
+          playBtn.innerHTML = '<img src="./assets/images/flip.svg" alt="repeat" class="repeat-icon">'
           const wordSound = new Audio("./assets/" + `${currentWord.audioSrc}`);
           wordSound.play();
         } else {
+          playBtn.innerHTML = '<img src="./assets/images/flip.svg" alt="repeat" class="repeat-icon">'
           const nextRandWord = getNextRandomWord();
           updateCurrentWord(nextRandWord);
           const wordSound = new Audio(

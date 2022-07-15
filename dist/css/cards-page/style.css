@@ -329,7 +329,10 @@ body{
         transform: rotateY( -180deg );
 
 }
-
+.repeat-icon {
+  width: 42px;
+  padding-top: 10px;
+}
 .modal {
   display: none; 
   position: fixed; 

@@ -19,7 +19,7 @@ for(let i = 0; i < categoryTitles.length; i++){
     const cardStats = JSON.parse(cardStatsJson);
     if(!cardStats){
         const allStats = [];
-        console.log(extendedCardData);
+
         for(let i = 0; i< categoryTitles.length; i++){
         extendedCardData[categoryTitles[i]].forEach(extendedCard=>{
             allStats.push({

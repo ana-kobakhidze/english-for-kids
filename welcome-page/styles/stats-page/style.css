@@ -273,6 +273,15 @@ body{
   .blue{
     background-color: var(--blue);
   }
+  .red:hover{
+    background-color: var(--fruits);
+    cursor: pointer;
+  }
+
+  .blue:hover{
+    background-color:#3f95cb;
+    cursor: pointer;
+  }
   table{
     width:100%;
     border-collapse: collapse;

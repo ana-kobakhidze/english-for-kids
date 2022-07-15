@@ -25,5 +25,6 @@ export const openModal = (isSuccess) => {
 
 export const closeModal = () => {
   modal.style.display = "none";
-  window.location.href = "https://ana-kobakhidze.github.io/english-for-kids/index.html";;
+  window.location.href = 
+  "https://ana-kobakhidze.github.io/english-for-kids/index.html";
 };
